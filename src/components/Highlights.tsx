@@ -5,49 +5,49 @@ import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import AutoFixHighRoundedIcon from '@mui/icons-material/AutoFixHighRounded';
+import AllInclusiveIcon from '@mui/icons-material/AllInclusive';
 import ConstructionRoundedIcon from '@mui/icons-material/ConstructionRounded';
 import QueryStatsRoundedIcon from '@mui/icons-material/QueryStatsRounded';
 import SettingsSuggestRoundedIcon from '@mui/icons-material/SettingsSuggestRounded';
-import SupportAgentRoundedIcon from '@mui/icons-material/SupportAgentRounded';
-import ThumbUpAltRoundedIcon from '@mui/icons-material/ThumbUpAltRounded';
+import PaymentsIcon from '@mui/icons-material/Payments';
+import WarehouseIcon from '@mui/icons-material/Warehouse';
 
 const items = [
   {
     icon: <SettingsSuggestRoundedIcon />,
-    title: 'Adaptable performance',
+    title: 'Miniaturizare',
     description:
-      'Our product effortlessly adjusts to your needs, boosting efficiency and simplifying your tasks.',
+      'PCB-urile permit reducerea dimensiunilor dispozitivelor electronice, făcându-le ideale pentru aplicații unde spațiul este limitat, cum ar fi electronicele de consum și dispozitivele medicale portabile.',
   },
   {
     icon: <ConstructionRoundedIcon />,
-    title: 'Built to last',
+    title: 'Fiabilitate',
     description:
-      'Experience unmatched durability that goes above and beyond with lasting investment.',
+      'Un PCB bine proiectat asigură conexiuni electrice stabile și durabile, reducând riscul defecțiunilor și prelungind durata de viață a dispozitivelor.',
   },
   {
-    icon: <ThumbUpAltRoundedIcon />,
-    title: 'Great user experience',
+    icon: <WarehouseIcon />,
+    title: 'Producție în Masă',
     description:
-      'Integrate our product into your routine with an intuitive and easy-to-use interface.',
+      'PCB-urile sunt esențiale pentru producția în masă a dispozitivelor electronice, oferind consistență și eficiență în procesul de fabricație.',
   },
   {
-    icon: <AutoFixHighRoundedIcon />,
-    title: 'Innovative functionality',
+    icon: <AllInclusiveIcon />,
+    title: 'Flexibilitate',
     description:
-      'Stay ahead with features that set new standards, addressing your evolving needs better than the rest.',
+      'Cu opțiuni de design flexibil, PCB-urile pot fi adaptate pentru o gamă largă de aplicații, de la simple circuite de control până la sisteme complexe de comunicații.',
   },
   {
-    icon: <SupportAgentRoundedIcon />,
-    title: 'Reliable support',
+    icon: <PaymentsIcon />,
+    title: 'Reducerea Costurilor',
     description:
-      'Count on our responsive customer support, offering assistance that goes beyond the purchase.',
+      'Utilizarea PCB-urilor poate reduce costurile de producție prin simplificarea asamblării și reducerea numărului de componente necesare.',
   },
   {
     icon: <QueryStatsRoundedIcon />,
-    title: 'Precision in every detail',
+    title: 'Performanță Electromagnetică',
     description:
-      'Enjoy a meticulously crafted product where small touches make a significant impact on your overall experience.',
+      'PCB-urile sunt proiectate pentru a minimiza interferențele electromagnetice, asigurând performanța optimă a circuitelor electronice.',
   },
 ];
 
@@ -78,12 +78,12 @@ export default function Highlights() {
           }}
         >
           <Typography component="h2" variant="h4">
-            Highlights
+            Puncte Cheie
           </Typography>
           <Typography variant="body1" sx={{ color: 'grey.400' }}>
-            Explore why our product stands out: adaptability, durability,
-            user-friendly design, and innovation. Enjoy reliable customer support and
-            precision in every detail.
+            Descoperă beneficiile esențiale ale utilizării PCB-urilor în proiectele tale.
+            Aceste puncte principale evidențiază avantajele majore și utilitatea plăcuțelor PCB, de la miniaturizare și fiabilitate, până la flexibilitate și performanță electromagnetică.
+            Fiecare aspect este gândit pentru a îmbunătăți eficiența, a reduce costurile și a asigura calitatea înaltă a produselor tale electronice.
           </Typography>
         </Box>
         <Grid container spacing={2.5}>

@@ -39,7 +39,7 @@ export default function FAQ() {
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
-        Frequently asked questions
+        Întrebări Frecvente
       </Typography>
       <Box sx={{ width: '100%' }}>
         <Accordion
@@ -52,19 +52,18 @@ export default function FAQ() {
             id="panel1d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              How do I contact customer support if I have a question or issue?
+              1. Cât durează procesul de proiectare al unui PCB?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              You can reach our customer support team by emailing
-              <Link> support@email.com </Link>
-              or calling our toll-free number. We&apos;re here to assist you
-              promptly.
+              Timpul necesar pentru proiectarea unui PCB variază în funcție de complexitatea proiectului.
+              În general, pentru un proiect simplu, procesul poate dura între 1 și 2 săptămâni.
+              Proiectele mai complexe pot necesita 3 până la 4 săptămâni sau mai mult.
+              Te voi ține informat pe tot parcursul procesului și voi lucra pentru a respecta termenele stabilite.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -78,18 +77,16 @@ export default function FAQ() {
             id="panel2d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Can I return the product if it doesn&apos;t meet my expectations?
+              2. Ce informații sunt necesare pentru a începe un proiect de PCB?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Absolutely! We offer a hassle-free return policy. If you&apos;re not
-              completely satisfied, you can return the product within [number of
-              days] days for a full refund or exchange.
+              Pentru a începe un proiect, am nevoie de specificațiile detaliate ale circuitului, schema electrică, lista de componente (BOM) și orice alte cerințe speciale pe care le ai.
+              Dacă nu ai toate aceste informații, putem discuta despre nevoile tale și te pot ghida prin procesul de colectare a datelor necesare.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -103,18 +100,17 @@ export default function FAQ() {
             id="panel3d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              What makes your product stand out from others in the market?
+              3. Oferi suport și după finalizarea proiectului?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Our product distinguishes itself through its adaptability, durability,
-              and innovative features. We prioritize user satisfaction and
-              continually strive to exceed expectations in every aspect.
+              Da, ofer suport tehnic și după finalizarea proiectului.
+              Voi fi disponibil pentru a răspunde la orice întrebări sau pentru a rezolva eventualele probleme care pot apărea.
+              Scopul meu este să mă asigur că ești complet mulțumit de produsul final și că acesta funcționează conform așteptărilor tale.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -128,19 +124,17 @@ export default function FAQ() {
             id="panel4d-header"
           >
             <Typography component="h3" variant="subtitle2">
-              Is there a warranty on the product, and what does it cover?
+              4. Pot solicita modificări după ce proiectul a fost finalizat?
             </Typography>
           </AccordionSummary>
           <AccordionDetails>
             <Typography
               variant="body2"
               gutterBottom
-              sx={{ maxWidth: { sm: '100%', md: '70%' } }}
             >
-              Yes, our product comes with a [length of warranty] warranty. It covers
-              defects in materials and workmanship. If you encounter any issues
-              covered by the warranty, please contact our customer support for
-              assistance.
+              Da, înțeleg că pot apărea schimbări sau ajustări necesare după finalizarea proiectului.
+              Pot efectua modificări, însă acestea pot implica costuri suplimentare în funcție de complexitatea și amploarea schimbărilor solicitate.
+              Vom discuta despre orice ajustări necesare și îți voi oferi o estimare a costurilor și a timpului necesar pentru a le implementa.
             </Typography>
           </AccordionDetails>
         </Accordion>

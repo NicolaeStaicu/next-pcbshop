@@ -5,38 +5,33 @@ import Card from '@mui/material/Card';
 import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
 import Grid from '@mui/material/Grid';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
-import ChevronRightRoundedIcon from '@mui/icons-material/ChevronRightRounded';
-import DevicesRoundedIcon from '@mui/icons-material/DevicesRounded';
-import EdgesensorHighRoundedIcon from '@mui/icons-material/EdgesensorHighRounded';
-import ViewQuiltRoundedIcon from '@mui/icons-material/ViewQuiltRounded';
+import PrecisionManufacturing from '@mui/icons-material/PrecisionManufacturing';
+import Construction from '@mui/icons-material/Construction';
+import Factory from '@mui/icons-material/Factory';
 
 const items = [
   {
-    icon: <ViewQuiltRoundedIcon />,
-    title: 'Dashboard',
+    icon: <PrecisionManufacturing />,
+    title: 'Proiectarea Schematica',
     description:
-      'This item could provide a snapshot of the most important metrics or data points related to the product.',
-    imageLight: 'url("/static/images/templates/templates-images/dash-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/dash-dark.png")',
+      'Proiectarea schematica reprezintă baza oricărui PCB de succes. Acest pas implică desenarea conexiunilor electronice dintre componente, asigurându-se că toate funcționalitățile dorite sunt integrate eficient.',
+    image: 'url("/images/pcb3.jpeg")',
   },
   {
-    icon: <EdgesensorHighRoundedIcon />,
-    title: 'Mobile integration',
+    icon: <Construction />,
+    title: 'Designul Layout-ului PCB',
     description:
-      'This item could provide information about the mobile app version of the product.',
-    imageLight: 'url("/static/images/templates/templates-images/mobile-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/mobile-dark.png")',
+      'Un layout bine realizat este esențial pentru performanța și fiabilitatea PCB-ului. Folosind cele mai recente tehnologii și software-uri, creez layout-uri care reduc interferențele electromagnetice, îmbunătățesc disiparea căldurii și optimizează spațiul utilizat.',
+    image: 'url("/images/pcb4.jpeg")',
   },
   {
-    icon: <DevicesRoundedIcon />,
-    title: 'Available on all platforms',
+    icon: <Factory />,
+    title: 'Prototipare și Testare',
     description:
-      'This item could let users know the product is available on all platforms, such as web, mobile, and desktop.',
-    imageLight: 'url("/static/images/templates/templates-images/devices-light.png")',
-    imageDark: 'url("/static/images/templates/templates-images/devices-dark.png")',
+      'Prototiparea rapidă și testarea riguroasă sunt esențiale pentru a asigura că PCB-ul funcționează conform specificațiilor. Ofer servicii complete de prototipare și testare, incluzând simulări și analize de performanță, pentru a identifica și corecta eventualele probleme înainte de producția în masă.',
+    image: 'url("/images/card6.jpg")',
   },
 ];
 
@@ -55,16 +50,14 @@ export default function Features() {
         <Grid item xs={12} md={6}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
-              Product features
+              Servicii
             </Typography>
             <Typography
               variant="body1"
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Here you can provide a brief overview of the key features of the
-              product. For example, you could list the number of features, the types
-              of features, add-ons, or the benefits of the features.
+              Descoperă expertiza mea în proiectarea PCB-urilor, de la realizarea conexiunilor electronice și designul eficient al layout-ului, până la prototipare și testare riguroasă, pentru a aduce la viață cele mai complexe idei electronice.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
@@ -104,39 +97,19 @@ export default function Features() {
           >
             <Box
               sx={{
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                backgroundImage: () => items[selectedItemIndex].image,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
                 minHeight: 280,
               }}
             />
-            <Box sx={{ px: 2, pb: 2 }}>
+            <Box sx={{ px: 2, py: 2 }}>
               <Typography color="text.primary" variant="body2" fontWeight="bold">
                 {selectedFeature.title}
               </Typography>
               <Typography color="text.secondary" variant="body2" sx={{ my: 0.5 }}>
                 {selectedFeature.description}
               </Typography>
-              <Link
-                color="primary"
-                variant="body2"
-                fontWeight="bold"
-                sx={{
-                  display: 'inline-flex',
-                  alignItems: 'center',
-                  '& > svg': { transition: '0.2s' },
-                  '&:hover > svg': { transform: 'translateX(2px)' },
-                }}
-              >
-                <span>Learn more</span>
-                <ChevronRightRoundedIcon
-                  fontSize="small"
-                  sx={{ mt: '1px', ml: '2px' }}
-                />
-              </Link>
             </Box>
           </Box>
           <Stack
@@ -211,26 +184,6 @@ export default function Features() {
                     >
                       {description}
                     </Typography>
-                    <Link
-                      color="primary"
-                      variant="body2"
-                      fontWeight="bold"
-                      sx={{
-                        display: 'inline-flex',
-                        alignItems: 'center',
-                        '& > svg': { transition: '0.2s' },
-                        '&:hover > svg': { transform: 'translateX(2px)' },
-                      }}
-                      onClick={(event) => {
-                        event.stopPropagation();
-                      }}
-                    >
-                      <span>Learn more</span>
-                      <ChevronRightRoundedIcon
-                        fontSize="small"
-                        sx={{ mt: '1px', ml: '2px' }}
-                      />
-                    </Link>
                   </Box>
                 </Box>
               </Card>
@@ -255,13 +208,10 @@ export default function Features() {
             <Box
               sx={{
                 m: 'auto',
-                width: 420,
+                width: 480,
                 height: 500,
-                backgroundSize: 'contain',
-                backgroundImage: (theme) =>
-                  theme.palette.mode === 'light'
-                    ? items[selectedItemIndex].imageLight
-                    : items[selectedItemIndex].imageDark,
+                backgroundSize: 'cover',
+                backgroundImage: () => items[selectedItemIndex].image,
               }}
             />
           </Card>

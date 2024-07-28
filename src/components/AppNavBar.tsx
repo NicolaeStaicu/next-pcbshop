@@ -10,12 +10,12 @@ import Typography from '@mui/material/Typography';
 import MenuItem from '@mui/material/MenuItem';
 import Drawer from '@mui/material/Drawer';
 import MenuIcon from '@mui/icons-material/Menu';
+import MemoryIcon from '@mui/icons-material/Memory';
 import ToggleColorMode from './ToggleColorMode';
+import { brand } from '@/theme';
 
 const logoStyle = {
-  width: '140px',
-  height: 'auto',
-  cursor: 'pointer',
+  cursor: 'pointer'
 };
 
 interface AppNavBarProps {
@@ -76,6 +76,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                 theme.palette.mode === 'light'
                   ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
                   : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
+              flexDirection: { xs: "row-reverse", md: 'row' },
             })}
           >
             <Box
@@ -84,23 +85,20 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                 display: 'flex',
                 alignItems: 'center',
                 ml: '-18px',
-                px: 0,
+                px: 0
               }}
             >
-              <img
-                src={
-                  'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                }
-                style={logoStyle}
-                alt="logo of sitemark"
-              />
+              <div className='flex items-center' style={logoStyle}>
+                <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
+                <Typography className='py-1.5 pr-3' variant="body2" color="text.primary">PCBShop</Typography>
+              </div>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Features
+                    Servicii
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -108,7 +106,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Testimonials
+                    Clienți
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -116,7 +114,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Highlights
+                    Puncte cheie
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -124,7 +122,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Pricing
+                    Prețuri
                   </Typography>
                 </MenuItem>
                 <MenuItem
@@ -147,26 +145,16 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
               <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
               <Button
                 color="primary"
-                variant="text"
-                size="small"
-                component="a"
-                href="/material-ui/getting-started/templates/sign-in/"
-                target="_blank"
-              >
-                Sign in
-              </Button>
-              <Button
-                color="primary"
                 variant="contained"
                 size="small"
                 component="a"
-                href="/material-ui/getting-started/templates/sign-up/"
+                onClick={() => scrollToSection('footer')}
                 target="_blank"
               >
-                Sign up
+                Contact
               </Button>
             </Box>
-            <Box sx={{ display: { sm: '', md: 'none' } }}>
+            <Box sx={{ display: { sm: 'flex', md: 'none' } }}>
               <Button
                 variant="text"
                 color="primary"
@@ -176,7 +164,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
               >
                 <MenuIcon />
               </Button>
-              <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
+              <Drawer anchor="left" open={open} onClose={toggleDrawer(false)}>
                 <Box
                   sx={{
                     minWidth: '60dvw',
@@ -196,41 +184,29 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                     <ToggleColorMode mode={mode} toggleColorMode={toggleColorMode} />
                   </Box>
                   <MenuItem onClick={() => scrollToSection('features')}>
-                    Features
+                    Servicii
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('testimonials')}>
-                    Testimonials
+                    Clienți
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('highlights')}>
-                    Highlights
+                    Puncte cheie
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('pricing')}>
-                    Pricing
+                    Prețuri
                   </MenuItem>
                   <MenuItem onClick={() => scrollToSection('faq')}>FAQ</MenuItem>
                   <Divider />
                   <MenuItem>
                     <Button
                       color="primary"
-                      variant="contained"
-                      component="a"
-                      href="/material-ui/getting-started/templates/sign-up/"
-                      target="_blank"
-                      sx={{ width: '100%' }}
-                    >
-                      Sign up
-                    </Button>
-                  </MenuItem>
-                  <MenuItem>
-                    <Button
-                      color="primary"
                       variant="outlined"
                       component="a"
-                      href="/material-ui/getting-started/templates/sign-in/"
+                      onClick={() => scrollToSection('footer')}
                       target="_blank"
                       sx={{ width: '100%' }}
                     >
-                      Sign in
+                      Contact
                     </Button>
                   </MenuItem>
                 </Box>

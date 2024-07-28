@@ -14,42 +14,39 @@ import CheckCircleRoundedIcon from '@mui/icons-material/CheckCircleRounded';
 
 const tiers = [
   {
-    title: 'Free',
-    price: '0',
+    title: 'Pachet de Bază',
+    price: '1000',
     description: [
-      '10 users included',
-      '2 GB of storage',
-      'Help center access',
-      'Email support',
+      'Complexitate proiect: redusă',
+      'Proiectarea schematică',
+      'Designul layout-ului PCB',
     ],
-    buttonText: 'Sign up for free',
+    buttonText: 'Contactează-mă',
     buttonVariant: 'outlined',
   },
   {
-    title: 'Professional',
-    subheader: 'Recommended',
-    price: '15',
+    title: 'Pachet Standard',
+    subheader: 'Recomandat',
+    price: '2500',
     description: [
-      '20 users included',
-      '10 GB of storage',
-      'Help center access',
-      'Priority email support',
-      'Dedicated team',
-      'Best deals',
+      'Complexitate proiect: medie',
+      'Proiectarea schematică',
+      'Designul layout-ului PCB',
+      'Prototipare',
+      'Testare de bază'
     ],
-    buttonText: 'Start now',
+    buttonText: 'Contactează-mă',
     buttonVariant: 'contained',
   },
   {
-    title: 'Enterprise',
-    price: '30',
+    title: 'Pachet Premium',
+    price: '5000',
     description: [
-      '50 users included',
-      '30 GB of storage',
-      'Help center access',
-      'Phone & email support',
+      'Complexitate proiect: mare',
+      'Include celelalte pachete',
+      'Testare avansată și Suport tehnic'
     ],
-    buttonText: 'Contact us',
+    buttonText: 'Contactează-mă',
     buttonVariant: 'outlined',
   },
 ];
@@ -70,18 +67,16 @@ export default function Pricing() {
     >
       <Box
         sx={{
-          width: { sm: '100%', md: '60%' },
+          width: { sm: '100%', md: '65%' },
           textAlign: { sm: 'left', md: 'center' },
         }}
       >
         <Typography component="h2" variant="h4" color="text.primary">
-          Pricing
+          Prețuri
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Quickly build an effective pricing table for your potential customers with
-          this layout. <br />
-          It&apos;s built with default Material UI components with little
-          customization.
+          Îmi doresc ca serviciile mele de proiectare PCB să fie accesibile și clare pentru toți clienții mei.
+          Pentru proiecte personalizate sau cerințe speciale, te rog să mă contactezi pentru o ofertă detaliată.
         </Typography>
       </Box>
       <Grid container spacing={3} alignItems="center" justifyContent="center">
@@ -99,11 +94,11 @@ export default function Pricing() {
                 display: 'flex',
                 flexDirection: 'column',
                 gap: 4,
-                border: tier.title === 'Professional' ? '1px solid' : undefined,
+                border: tier.title === 'Pachet Standard' ? '1px solid' : undefined,
                 borderColor:
-                  tier.title === 'Professional' ? 'primary.main' : undefined,
+                  tier.title === 'Pachet Standard' ? 'primary.main' : undefined,
                 background:
-                  tier.title === 'Professional'
+                  tier.title === 'Pachet Standard'
                     ? 'linear-gradient(#033363, #021F3B)'
                     : undefined,
               }}
@@ -115,13 +110,13 @@ export default function Pricing() {
                     display: 'flex',
                     justifyContent: 'space-between',
                     alignItems: 'center',
-                    color: tier.title === 'Professional' ? 'grey.100' : '',
+                    color: tier.title === 'Pachet Standard' ? 'grey.100' : '',
                   }}
                 >
                   <Typography component="h3" variant="h6">
                     {tier.title}
                   </Typography>
-                  {tier.title === 'Professional' && (
+                  {tier.title === 'Pachet Standard' && (
                     <Chip
                       icon={<AutoAwesomeIcon />}
                       label={tier.subheader}
@@ -144,14 +139,11 @@ export default function Pricing() {
                   sx={{
                     display: 'flex',
                     alignItems: 'baseline',
-                    color: tier.title === 'Professional' ? 'grey.50' : undefined,
+                    color: tier.title === 'Pachet Standard' ? 'grey.50' : undefined,
                   }}
                 >
                   <Typography component="h3" variant="h2">
-                    ${tier.price}
-                  </Typography>
-                  <Typography component="h3" variant="h6">
-                    &nbsp; per month
+                    RON {tier.price}
                   </Typography>
                 </Box>
                 <Divider
@@ -175,7 +167,7 @@ export default function Pricing() {
                       sx={{
                         width: 20,
                         color:
-                          tier.title === 'Professional'
+                          tier.title === 'Pachet Standard'
                             ? 'primary.light'
                             : 'primary.main',
                       }}
@@ -185,7 +177,7 @@ export default function Pricing() {
                       variant="subtitle2"
                       sx={{
                         color:
-                          tier.title === 'Professional' ? 'grey.200' : undefined,
+                          tier.title === 'Pachet Standard' ? 'grey.200' : undefined,
                       }}
                     >
                       {line}
