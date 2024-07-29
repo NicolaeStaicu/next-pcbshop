@@ -14,10 +14,6 @@ import MemoryIcon from '@mui/icons-material/Memory';
 import ToggleColorMode from './ToggleColorMode';
 import { brand } from '@/theme';
 
-const logoStyle = {
-  cursor: 'pointer'
-};
-
 interface AppNavBarProps {
   mode: PaletteMode;
   toggleColorMode: () => void;
@@ -76,7 +72,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                 theme.palette.mode === 'light'
                   ? `0 0 1px rgba(85, 166, 246, 0.1), 1px 1.5px 2px -1px rgba(85, 166, 246, 0.15), 4px 4px 12px -2.5px rgba(85, 166, 246, 0.15)`
                   : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
-              flexDirection: { xs: "row-reverse", md: 'row' },
+              flexDirection: { xs: "row-reverse", md: 'row' }
             })}
           >
             <Box
@@ -85,13 +81,14 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                 display: 'flex',
                 alignItems: 'center',
                 ml: '-18px',
-                px: 0
+                px: 0,
+                justifyContent: { xs: 'flex-end', md: 'flex-start' }
               }}
             >
-              <div className='flex items-center' style={logoStyle}>
+              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
                 <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
                 <Typography className='py-1.5 pr-3' variant="body2" color="text.primary">PCBShop</Typography>
-              </div>
+              </Box>
               <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                 <MenuItem
                   onClick={() => scrollToSection('features')}

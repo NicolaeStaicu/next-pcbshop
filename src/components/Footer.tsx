@@ -1,18 +1,18 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
 import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
-
-import FacebookIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import TwitterIcon from '@mui/icons-material/X';
 import MemoryIcon from '@mui/icons-material/Memory';
+import EmailIcon from '@mui/icons-material/Email';
+import PhoneIcon from '@mui/icons-material/Phone';
+import BadgeIcon from '@mui/icons-material/Badge';
+import TagIcon from '@mui/icons-material/Tag';
+import GavelIcon from '@mui/icons-material/Gavel';
+import HomeIcon from '@mui/icons-material/Home';
+import PersonIcon from '@mui/icons-material/Person2Outlined';
 import { brand } from '@/theme';
+import { Card, CardContent, CardHeader, FormControl, TextField } from '@mui/material';
 
 function Copyright() {
   return (
@@ -50,65 +50,79 @@ export default function Footer() {
             display: 'flex',
             flexDirection: 'column',
             gap: 4,
-            minWidth: { xs: '100%', sm: '60%' },
+            minWidth: { xs: '100%', sm: '40%' },
           }}
         >
-          <Box sx={{ width: { xs: '100%', sm: '60%' } }}>
-            <Box sx={{ ml: '-5px', display: 'flex', alignItems: 'center' }}>
-              <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
-              <Typography className='py-1.5 pr-3' variant="body2" color="text.primary">PCBShop</Typography>
-            </Box>
-            <Typography variant="body2" fontWeight={600} gutterBottom>
-              Newsletter
-            </Typography>
-            <Typography variant="body2" color="text.secondary" mb={2}>
-              Subscribe to our newsletter for weekly updates and promotions.
-            </Typography>
-            <Stack direction="row" spacing={1} useFlexGap>
-              <TextField
-                id="outlined-basic"
-                hiddenLabel
-                size="small"
-                variant="outlined"
-                fullWidth
-                aria-label="Enter your email address"
-                placeholder="Your email address"
-                inputProps={{
-                  autoComplete: 'off',
-                  'aria-label': 'Enter your email address',
-                }}
-              />
-              <Button variant="contained" color="primary" sx={{ flexShrink: 0 }}>
-                Subscribe
-              </Button>
-            </Stack>
+          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+            <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
+            <Typography variant="subtitle2" fontWeight={600}>PCBShop</Typography>
           </Box>
+          <Card variant='outlined' sx={{ width: '100%' }}>
+            <CardHeader sx={{ paddingBottom: '0px' }} title='Detalii contact'></CardHeader>
+            <CardContent>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <EmailIcon fontSize="large" sx={{ color: brand[500] }}></EmailIcon>
+                <Typography variant="subtitle2" fontWeight={600}>
+                  contact@pcbshop.ro
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <PhoneIcon fontSize="large" sx={{ color: brand[500] }}></PhoneIcon>
+                <Typography variant="subtitle2" fontWeight={600}>
+                  0765010106
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
+          <Card variant='outlined' sx={{ width: '100%' }}>
+            <CardHeader sx={{ paddingBottom: '0px' }} title='Date firmă'></CardHeader>
+            <CardContent>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <BadgeIcon fontSize="large" sx={{ color: brand[500] }}></BadgeIcon>
+                <Typography paddingTop={'0.6rem'} variant="subtitle2" fontWeight={600}>
+                  S.C Sample Shop PCB S.R.L
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <TagIcon fontSize="large" sx={{ color: brand[500] }}></TagIcon>
+                <Typography variant="subtitle2" fontWeight={600}>
+                  RO45686317 (CIF)
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '0.5rem' }}>
+                <GavelIcon fontSize="large" sx={{ color: brand[500] }}></GavelIcon>
+                <Typography variant="subtitle2" fontWeight={600}>
+                  J3/463/2022 (Nr. Reg. Com.)
+                </Typography>
+              </Box>
+              <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                <HomeIcon fontSize="large" sx={{ color: brand[500] }}></HomeIcon>
+                <Typography paddingTop={'0.2rem'} variant="subtitle2" fontWeight={600}>
+                  Str. Stefan Ciobanu nr.66, Pitești, Argeș
+                </Typography>
+              </Box>
+            </CardContent>
+          </Card>
         </Box>
         <Box
           sx={{
             display: { xs: 'none', sm: 'flex' },
             flexDirection: 'column',
             gap: 1,
+            minWidth: { xs: '100%', sm: '50%' },
           }}
         >
-          <Typography variant="body2" fontWeight={600}>
-            Product
-          </Typography>
-          <Link color="text.secondary" href="#">
-            Features
-          </Link>
-          <Link color="text.secondary" href="#">
-            Testimonials
-          </Link>
-          <Link color="text.secondary" href="#">
-            Highlights
-          </Link>
-          <Link color="text.secondary" href="#">
-            Pricing
-          </Link>
-          <Link color="text.secondary" href="#">
-            FAQs
-          </Link>
+          <Card sx={{ height: '100%' }}>
+            <CardHeader title='Trimite-mi un mesaj'></CardHeader>
+            <CardContent>
+              <FormControl className='w-full'>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                  <PersonIcon fontSize="large" sx={{ color: brand[500] }} />
+                  <TextField hiddenLabel fullWidth id="input-full-name" label="Nume și Prenume" variant="outlined" />
+                </Box>
+              </FormControl>
+            </CardContent>
+          </Card>
         </Box>
       </Box>
       <Box
