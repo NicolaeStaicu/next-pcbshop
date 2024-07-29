@@ -42,6 +42,7 @@ export default function Footer() {
           display: 'flex',
           flexDirection: { xs: 'column', sm: 'row' },
           width: '100%',
+          gap: { xs: 4, sm: 0 },
           justifyContent: 'space-between',
         }}
       >
@@ -106,10 +107,9 @@ export default function Footer() {
         </Box>
         <Box
           sx={{
-            display: { xs: 'none', sm: 'flex' },
+            display: 'flex',
             flexDirection: 'column',
-            gap: 1,
-            minWidth: { xs: '100%', sm: '50%' },
+            minWidth: { xs: '100%', sm: '55%' },
           }}
         >
           <Card sx={{ height: '100%' }}>
@@ -117,7 +117,7 @@ export default function Footer() {
             <CardContent>
               <FormControl className='w-full'>
                 <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
-                  <PersonIcon fontSize="large" sx={{ color: brand[500] }} />
+                  <PersonIcon fontSize="large" sx={{ color: brand[500], paddingBottom: '2px' }} />
                   <TextField hiddenLabel fullWidth id="input-full-name" label="Nume și Prenume" variant="outlined" />
                 </Box>
               </FormControl>

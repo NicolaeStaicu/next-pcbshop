@@ -572,16 +572,7 @@ export default function getTheme(mode: PaletteMode): ThemeOptions {
                         },
                     },
                 },
-            },
-            MuiTextField: {
-                styleOverrides: {
-                    root: ({ theme }) => ({
-                        '& label': {
-                            paddingTop: '2px'
-                        }
-                    }),
-                },
-            },
+            }
         },
     };
 }
