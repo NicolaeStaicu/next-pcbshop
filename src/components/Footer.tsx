@@ -11,8 +11,12 @@ import TagIcon from '@mui/icons-material/Tag';
 import GavelIcon from '@mui/icons-material/Gavel';
 import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person2Outlined';
+import MessageIcon from '@mui/icons-material/Message';
+import SendIcon from '@mui/icons-material/Send';
+import LoadingButton from '@mui/lab/LoadingButton';
 import { brand } from '@/theme';
-import { Card, CardContent, CardHeader, FormControl, TextField } from '@mui/material';
+import { Alert, AlertColor, Card, CardActions, CardContent, CardHeader, Slide, SlideProps, Snackbar, SnackbarOrigin, TextField } from '@mui/material';
+import emailjs from '@emailjs/browser';
 
 function Copyright() {
   return (
@@ -24,7 +28,80 @@ function Copyright() {
   );
 }
 
+function SlideTransition(props: SlideProps) {
+  return <Slide {...props} direction="left" />;
+}
+
+interface State extends SnackbarOrigin {
+  open: boolean;
+  severity: AlertColor;
+  message: string
+}
+
 export default function Footer() {
+  const [state, setState] = React.useState<State>({
+    open: false,
+    vertical: 'top',
+    horizontal: 'right',
+    severity: 'success',
+    message: ''
+  });
+  const [showSnackBar, setShowSnackBar] = React.useState<boolean>(false);
+  const [loading, setLoading] = React.useState(false);
+  const { vertical, horizontal, open, severity, message } = state;
+  const form = React.useRef();
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    setLoading(true);
+    if (e.target.checkValidity()) {
+      if (form.current) {
+        emailjs.sendForm('service_7q4i4fh', 'template_735dpmg', form.current, {
+          publicKey: 'QRLTschR8MDDzMoo3',
+        }).then(
+          () => {
+            setLoading(false);
+            setShowSnackBar(true);
+            setState(
+              {
+                vertical: 'top',
+                horizontal: 'right',
+                open: true,
+                severity: 'success',
+                message: 'Mesajul a fost trimis cu succes!'
+              });
+          },
+          (error) => {
+            setLoading(false);
+            setShowSnackBar(true);
+            setState(
+              {
+                vertical: 'top',
+                horizontal: 'right',
+                open: true,
+                severity: 'error',
+                message: error.text
+              });
+          },
+        );
+      }
+    } else {
+      setShowSnackBar(true);
+      setState(
+        {
+          vertical: 'top',
+          horizontal: 'right',
+          open: true,
+          severity: 'error',
+          message: 'Vă rugăm să completați toate câmpurile cu steluță!'
+        });
+    }
+  };
+
+  const handleClose = () => {
+    setState({ ...state, open: false });
+  };
+
   return (
     <Container
       id='footer'
@@ -54,7 +131,7 @@ export default function Footer() {
             minWidth: { xs: '100%', sm: '40%' },
           }}
         >
-          <Box sx={{ display: 'flex', alignItems: 'center' }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', padding: '1rem', paddingBottom: 0, paddingLeft: '10px' }}>
             <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
             <Typography variant="subtitle2" fontWeight={600}>PCBShop</Typography>
           </Box>
@@ -115,12 +192,49 @@ export default function Footer() {
           <Card sx={{ height: '100%' }}>
             <CardHeader title='Trimite-mi un mesaj'></CardHeader>
             <CardContent>
-              <FormControl className='w-full'>
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+              <Box component='form' ref={form} onSubmit={handleSubmit} noValidate className='w-full'>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
                   <PersonIcon fontSize="large" sx={{ color: brand[500], paddingBottom: '2px' }} />
-                  <TextField hiddenLabel fullWidth id="input-full-name" label="Nume și Prenume" variant="outlined" />
+                  <TextField type='text' name='name' required hiddenLabel fullWidth id="input-full-name" label="Nume și Prenume" variant="outlined" />
                 </Box>
-              </FormControl>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                  <EmailIcon fontSize="large" sx={{ color: brand[500], paddingBottom: '2px' }} />
+                  <TextField type='text' name='email' required hiddenLabel fullWidth id="input-email" label="Email" variant="outlined" />
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: '0.5rem', marginBottom: '1rem' }}>
+                  <PhoneIcon fontSize="large" sx={{ color: brand[500], paddingBottom: '2px' }} />
+                  <TextField type='text' name='phone' hiddenLabel fullWidth id="input-phone" label="Telefon" variant="outlined" />
+                </Box>
+                <Box sx={{ display: 'flex', alignItems: 'top', gap: '0.5rem', height: '100%' }}>
+                  <MessageIcon fontSize="large" sx={{ color: brand[500], marginTop: '0.7rem' }} />
+                  <TextField type='text' name='message' required hiddenLabel multiline fullWidth id="input-message" label="Mesaj" variant="outlined" rows={6} />
+                </Box>
+                <CardActions sx={{ padding: 0, paddingTop: '8px' }} className='justify-end'>
+                  <LoadingButton type='submit' loading={loading} variant='outlined' startIcon={<SendIcon />}>
+                    Trimite
+                  </LoadingButton>
+                </CardActions>
+              </Box>
+              {showSnackBar ?
+                <Snackbar
+                  anchorOrigin={{ vertical, horizontal }}
+                  open={open}
+                  autoHideDuration={3000}
+                  onClose={handleClose}
+                  TransitionComponent={SlideTransition}
+                >
+                  <Alert
+                    onClose={handleClose}
+                    severity={severity}
+                    variant="filled"
+                    sx={{ width: '100%' }}
+                  >
+                    {message}
+                  </Alert>
+                </Snackbar>
+                :
+                null
+              }
             </CardContent>
           </Card>
         </Box>
