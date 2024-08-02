@@ -72,7 +72,7 @@ export default function Hero() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
-            backgroundImage: 'url("/images/pcb5.jpeg")',
+            backgroundImage: 'url("./images/pcb5.jpeg")',
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             borderRadius: '10px',

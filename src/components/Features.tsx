@@ -17,21 +17,21 @@ const items = [
     title: 'Proiectarea Schematica',
     description:
       'Proiectarea schematica reprezintă baza oricărui PCB de succes. Acest pas implică desenarea conexiunilor electronice dintre componente, asigurându-se că toate funcționalitățile dorite sunt integrate eficient.',
-    image: 'url("/images/pcb3.jpeg")',
+    image: 'url("./images/pcb3.jpeg")',
   },
   {
     icon: <Construction />,
     title: 'Designul Layout-ului PCB',
     description:
       'Un layout bine realizat este esențial pentru performanța și fiabilitatea PCB-ului. Folosind cele mai recente tehnologii și software-uri, creez layout-uri care reduc interferențele electromagnetice, îmbunătățesc disiparea căldurii și optimizează spațiul utilizat.',
-    image: 'url("/images/pcb4.jpeg")',
+    image: 'url("./images/pcb4.jpeg")',
   },
   {
     icon: <Factory />,
     title: 'Prototipare și Testare',
     description:
       'Prototiparea rapidă și testarea riguroasă sunt esențiale pentru a asigura că PCB-ul funcționează conform specificațiilor. Ofer servicii complete de prototipare și testare, incluzând simulări și analize de performanță, pentru a identifica și corecta eventualele probleme înainte de producția în masă.',
-    image: 'url("/images/card6.jpg")',
+    image: 'url("./images/card6.jpg")',
   },
 ];
 
