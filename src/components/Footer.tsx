@@ -87,6 +87,7 @@ export default function Footer() {
       }
     } else {
       setShowSnackBar(true);
+      setLoading(false);
       setState(
         {
           vertical: 'top',

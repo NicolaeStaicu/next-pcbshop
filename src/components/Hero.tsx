@@ -62,7 +62,7 @@ export default function Hero() {
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '70%' } }}
           >
             Bine ai venit!
-            Sunt Cătălin, specialist dedicat în proiectarea PCB-urilor de calitate superioară. Ofer soluții complete și personalizate, de la concept la producție, pentru a transforma ideile tale în realitate.
+            Specializat în crearea de plăcuțe PCB de înaltă calitate, ofer soluții personalizate pentru fiecare proiect. De la concept la prototip și producție, transform ideile tale în realitate cu atenție la detalii și eficiență.
           </Typography>
         </Stack>
         <Box

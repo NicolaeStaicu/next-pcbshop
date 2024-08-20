@@ -85,7 +85,7 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                 justifyContent: { xs: 'flex-end', md: 'flex-start' }
               }}
             >
-              <Box sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
+              <Box onClick={() => scrollToSection('hero')} sx={{ display: 'flex', alignItems: 'center', cursor: 'pointer' }}>
                 <MemoryIcon fontSize="large" sx={{ color: brand[500] }}></MemoryIcon>
                 <Typography className='py-1.5 pr-3' variant="body2" color="text.primary">PCBShop</Typography>
               </Box>
@@ -115,11 +115,11 @@ function AppNavBar({ mode, toggleColorMode }: AppNavBarProps) {
                   </Typography>
                 </MenuItem>
                 <MenuItem
-                  onClick={() => scrollToSection('pricing')}
+                  onClick={() => scrollToSection('specifications')}
                   sx={{ py: '6px', px: '12px' }}
                 >
                   <Typography variant="body2" color="text.primary">
-                    Prețuri
+                    Specificații
                   </Typography>
                 </MenuItem>
                 <MenuItem

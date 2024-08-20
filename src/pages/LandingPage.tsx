@@ -7,7 +7,7 @@ import Divider from '@mui/material/Divider';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Hero from '@/components/Hero';
 import Highlights from '@/components/Highlights';
-import Pricing from '@/components/Pricing';
+import Specifications from '@/components/Specifications';
 import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
@@ -15,6 +15,7 @@ import Footer from '@/components/Footer';
 import getTheme from '@/theme';
 import AppNavBar from '@/components/AppNavBar';
 import { useState } from 'react';
+import Scroll from '@/components/ScrollButton';
 
 export default function LandingPage() {
   const [mode, setMode] = useState<PaletteMode>('light');
@@ -36,12 +37,13 @@ export default function LandingPage() {
         <Divider />
         <Highlights />
         <Divider />
-        <Pricing />
+        <Specifications />
         <Divider />
         <FAQ />
         <Divider />
         <Footer />
       </Box>
+      <Scroll showBelow={250}></Scroll>
     </ThemeProvider>
   );
 }
