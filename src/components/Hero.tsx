@@ -62,7 +62,7 @@ export default function Hero() {
             sx={{ alignSelf: 'center', width: { sm: '100%', md: '70%' } }}
           >
             Bine ai venit!
-            Specializat în crearea de plăcuțe PCB de înaltă calitate, ofer soluții personalizate pentru fiecare proiect. De la concept la prototip și producție, transform ideile tale în realitate cu atenție la detalii și eficiență.
+            Specializați în crearea de plăcuțe PCB de înaltă calitate, oferim soluții personalizate pentru fiecare proiect. De la concept la prototip și producție, transformăm ideile tale în realitate cu atenție la detalii și eficiență.
           </Typography>
         </Stack>
         <Box

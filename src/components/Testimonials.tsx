@@ -21,21 +21,21 @@ const userTestimonials = [
     name: 'Ion Popescu',
     occupation: 'Inginer senior',
     testimonial:
-      "Colaborarea cu Cătălin a fost excelentă. Proiectele noastre de PCB au fost finalizate la timp și au depășit așteptările noastre în ceea ce privește calitatea și funcționalitatea.",
+      "Colaborarea cu PCBShop a fost excelentă. Proiectele noastre de PCB au fost finalizate la timp și au depășit așteptările noastre în ceea ce privește calitatea și funcționalitatea.",
   },
   {
     avatar: <Avatar sx={{bgcolor: green[500]}} {...stringAvatar('Maria Ionescu')} />,
     name: 'Maria Ionescu',
     occupation: 'Inginer Șef',
     testimonial:
-      "Cătălin ne-a ajutat să dezvoltăm un PCB complex pentru un nou produs. Expertiza și atenția la detalii au fost de neegalat, iar suportul tehnic a fost mereu disponibil.",
+      "PCBShop ne-a ajutat să dezvoltăm un PCB complex pentru un nou produs. Expertiza și atenția la detalii au fost de neegalat, iar suportul tehnic a fost mereu disponibil.",
   },
   {
     avatar: <Avatar sx={{bgcolor: gray[500]}} {...stringAvatar('Andrei Georgescu')} />,
     name: 'Andrei Georgescu',
     occupation: 'Manager Proiect',
     testimonial:
-      "Am avut nevoie de un PCB personalizat într-un timp foarte scurt. Cătălin a livrat nu doar rapid, dar și cu o calitate impecabilă. Recomand cu încredere serviciile lui.",
+      "Am avut nevoie de un PCB personalizat într-un timp foarte scurt. PCBShop a livrat nu doar rapid, dar și cu o calitate impecabilă. Recomand cu încredere serviciile lor.",
   }
 ];
 
