@@ -23,14 +23,14 @@ const items = [
     icon: <Construction />,
     title: 'Designul Layout-ului PCB',
     description:
-      'Un layout bine realizat este esențial pentru performanța și fiabilitatea PCB-ului. Folosind cele mai recente tehnologii și software-uri, creez layout-uri care reduc interferențele electromagnetice, îmbunătățesc disiparea căldurii și optimizează spațiul utilizat.',
+      'Un layout bine realizat este esențial pentru performanța și fiabilitatea PCB-ului. Folosind cele mai recente tehnologii și software-uri, creăm layout-uri care reduc interferențele electromagnetice, îmbunătățesc disiparea căldurii și optimizează spațiul utilizat.',
     image: 'url("./images/pcb4.jpeg")',
   },
   {
     icon: <Factory />,
     title: 'Prototipare și Testare',
     description:
-      'Prototiparea rapidă și testarea riguroasă sunt esențiale pentru a asigura că PCB-ul funcționează conform specificațiilor. Ofer servicii complete de prototipare și testare, incluzând simulări și analize de performanță, pentru a identifica și corecta eventualele probleme înainte de producția în masă.',
+      'Prototiparea rapidă și testarea riguroasă sunt esențiale pentru a asigura că PCB-ul funcționează conform specificațiilor. Oferim servicii complete de prototipare și testare, incluzând simulări și analize de performanță, pentru a identifica și corecta eventualele probleme înainte de producția în masă.',
     image: 'url("./images/card6.jpg")',
   },
 ];
@@ -57,7 +57,7 @@ export default function Features() {
               color="text.secondary"
               sx={{ mb: { xs: 2, sm: 4 } }}
             >
-              Descoperă expertiza mea în proiectarea PCB-urilor, de la realizarea conexiunilor electronice și designul eficient al layout-ului, până la prototipare și testare riguroasă, pentru a aduce la viață cele mai complexe idei electronice.
+              Descoperă expertiza noastră în proiectarea PCB-urilor, de la realizarea conexiunilor electronice și designul eficient al layout-ului, până la prototipare și testare riguroasă, pentru a aduce la viață cele mai complexe idei electronice.
             </Typography>
           </div>
           <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>

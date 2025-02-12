@@ -63,8 +63,8 @@ export default function Testimonials() {
           Păreri clienți
         </Typography>
         <Typography variant="body1" color="text.secondary">
-          Colaborarea cu clienții mei este esențială pentru succesul fiecărui proiect de proiectare PCB.
-          Iată câteva dintre mărturiile celor care au beneficiat de serviciile mele.
+          Colaborarea cu clienții noștri este esențială pentru succesul fiecărui proiect de proiectare PCB.
+          Iată câteva dintre mărturiile celor care au beneficiat de serviciile noastre.
         </Typography>
       </Box>
       <Grid container spacing={2}>

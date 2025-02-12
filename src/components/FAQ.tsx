@@ -63,7 +63,7 @@ export default function FAQ() {
               Timpul necesar pentru proiectarea unui PCB variază în funcție de complexitatea proiectului.
               În general, pentru un proiect simplu, procesul poate dura între 1 și 2 săptămâni.
               Proiectele mai complexe pot necesita 3 până la 4 săptămâni sau mai mult.
-              Te voi ține informat pe tot parcursul procesului și voi lucra pentru a respecta termenele stabilite.
+              Te vom ține informat pe tot parcursul procesului și vom lucra pentru a respecta termenele stabilite.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -85,8 +85,8 @@ export default function FAQ() {
               variant="body2"
               gutterBottom
             >
-              Pentru a începe un proiect, am nevoie de specificațiile detaliate ale circuitului, schema electrică, lista de componente (BOM) și orice alte cerințe speciale pe care le ai.
-              Dacă nu ai toate aceste informații, putem discuta despre nevoile tale și te pot ghida prin procesul de colectare a datelor necesare.
+              Pentru a începe un proiect, avem nevoie de specificațiile detaliate ale circuitului, schema electrică, lista de componente (BOM) și orice alte cerințe speciale pe care le ai.
+              Dacă nu ai toate aceste informații, putem discuta despre nevoile tale și te putem ghida prin procesul de colectare a datelor necesare.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -108,9 +108,9 @@ export default function FAQ() {
               variant="body2"
               gutterBottom
             >
-              Da, ofer suport tehnic și după finalizarea proiectului.
-              Voi fi disponibil pentru a răspunde la orice întrebări sau pentru a rezolva eventualele probleme care pot apărea.
-              Scopul meu este să mă asigur că ești complet mulțumit de produsul final și că acesta funcționează conform așteptărilor tale.
+              Da, oferim suport tehnic și după finalizarea proiectului.
+              Vom fi disponibil pentru a răspunde la orice întrebări sau pentru a rezolva eventualele probleme care pot apărea.
+              Scopul nostru este să ne asigurăm că ești complet mulțumit de produsul final și că acesta funcționează conform așteptărilor tale.
             </Typography>
           </AccordionDetails>
         </Accordion>
@@ -133,8 +133,8 @@ export default function FAQ() {
               gutterBottom
             >
               Da, înțeleg că pot apărea schimbări sau ajustări necesare după finalizarea proiectului.
-              Pot efectua modificări, însă acestea pot implica costuri suplimentare în funcție de complexitatea și amploarea schimbărilor solicitate.
-              Vom discuta despre orice ajustări necesare și îți voi oferi o estimare a costurilor și a timpului necesar pentru a le implementa.
+              Putem efectua modificări, însă acestea pot implica costuri suplimentare în funcție de complexitatea și amploarea schimbărilor solicitate.
+              Vom discuta despre orice ajustări necesare și îți vom oferi o estimare a costurilor și a timpului necesar pentru a le implementa.
             </Typography>
           </AccordionDetails>
         </Accordion>
