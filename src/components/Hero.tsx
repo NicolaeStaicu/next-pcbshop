@@ -1,12 +1,10 @@
 import * as React from 'react';
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
-import Button from '@mui/material/Button';
 import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
-import TextField from '@mui/material/TextField';
 import Typography from '@mui/material/Typography';
+import HeroBackground from '../../public/images/pcb5.jpeg'
 
 export default function Hero() {
   return (
@@ -72,7 +70,7 @@ export default function Hero() {
             alignSelf: 'center',
             height: { xs: 200, sm: 700 },
             width: '100%',
-            backgroundImage: 'url("./images/pcb5.jpeg")',
+            backgroundImage: `url(${HeroBackground.src})`,
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             borderRadius: '10px',
