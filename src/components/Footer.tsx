@@ -20,13 +20,19 @@ import { Alert, AlertColor, Button, Card, CardActions, CardContent, CardHeader, 
 import emailjs from '@emailjs/browser';
 
 function Copyright() {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' })
+  }
+
   return (
     <Typography variant="body2" color="text.secondary" mt={1}>
       {'Copyright © '}
-      <Link href="/">PCBShop&nbsp;</Link>
+      <Button onClick={scrollToTop} sx={{ padding: 0 }}>
+        PCBShop&nbsp;
+      </Button>
       {new Date().getFullYear()}
     </Typography>
-  );
+  )
 }
 
 function SlideTransition(props: SlideProps) {

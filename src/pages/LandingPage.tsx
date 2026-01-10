@@ -1,10 +1,8 @@
 'use client'
 
-import { PaletteMode } from '@mui/material';
-import CssBaseline from '@mui/material/CssBaseline';
+import { useContext } from 'react';
 import Box from '@mui/material/Box';
 import Divider from '@mui/material/Divider';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
 import Hero from '@/components/Hero';
 import Highlights from '@/components/Highlights';
 import Specifications from '@/components/Specifications';
@@ -12,33 +10,15 @@ import Features from '@/components/Features';
 import Testimonials from '@/components/Testimonials';
 import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
-import getTheme from '@/theme';
 import AppNavBar from '@/components/AppNavBar';
-import { useEffect, useState } from 'react';
 import Scroll from '@/components/ScrollButton';
+import { ThemeContext } from '@/components/ThemeWrapper';
 
 export default function LandingPage() {
-  const [mode, setMode] = useState<PaletteMode | null>(null);
-
-  useEffect(() => {
-    const storedMode = localStorage.getItem('theme') as PaletteMode | null;
-    setMode(storedMode === 'dark' || storedMode === 'light' ? storedMode : 'light');
-  }, []);
-
-  const toggleColorMode = () => {
-    if (!mode) return;
-    const newMode: PaletteMode = mode === 'dark' ? 'light' : 'dark';
-    localStorage.setItem('theme', newMode);
-    setMode(newMode);
-  };
-
-  if (!mode) return null;
-
-  const LPtheme = createTheme(getTheme(mode));
+  const { mode, toggleColorMode } = useContext(ThemeContext);
 
   return (
-    <ThemeProvider theme={LPtheme}>
-      <CssBaseline />
+    <>
       <AppNavBar mode={mode} toggleColorMode={toggleColorMode} />
       <Hero />
       <Box sx={{ bgcolor: 'background.default' }}>
@@ -54,7 +34,7 @@ export default function LandingPage() {
         <Divider />
         <Footer />
       </Box>
-      <Scroll showBelow={250}></Scroll>
-    </ThemeProvider>
+      <Scroll showBelow={250} />
+    </>
   );
 }
