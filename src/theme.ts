@@ -11,7 +11,7 @@ const inter = Inter({
     display: 'swap',
 });
 
-declare module '@mui/material/styles/createPalette' {
+declare module '@mui/material/styles' {
     interface ColorRange {
         50: string;
         100: string;

@@ -1,3 +1,5 @@
+'use client'
+
 import { IconButton, styled } from "@mui/material";
 import ExpandLessIcon from '@mui/icons-material/ExpandLess';
 import { useEffect, useState } from "react";

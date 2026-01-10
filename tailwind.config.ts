@@ -8,7 +8,7 @@ const config = {
     './src/**/*.{ts,tsx}',
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
-  darkMode: ['class']
+  darkMode: 'class'
 } satisfies Config
 
 export default config

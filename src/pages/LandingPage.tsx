@@ -14,16 +14,27 @@ import FAQ from '@/components/FAQ';
 import Footer from '@/components/Footer';
 import getTheme from '@/theme';
 import AppNavBar from '@/components/AppNavBar';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Scroll from '@/components/ScrollButton';
 
 export default function LandingPage() {
-  const [mode, setMode] = useState<PaletteMode>('light');
-  const LPtheme = createTheme(getTheme(mode));
+  const [mode, setMode] = useState<PaletteMode | null>(null);
+
+  useEffect(() => {
+    const storedMode = localStorage.getItem('theme') as PaletteMode | null;
+    setMode(storedMode === 'dark' || storedMode === 'light' ? storedMode : 'light');
+  }, []);
 
   const toggleColorMode = () => {
-    setMode((prev) => (prev === 'dark' ? 'light' : 'dark'));
+    if (!mode) return;
+    const newMode: PaletteMode = mode === 'dark' ? 'light' : 'dark';
+    localStorage.setItem('theme', newMode);
+    setMode(newMode);
   };
+
+  if (!mode) return null;
+
+  const LPtheme = createTheme(getTheme(mode));
 
   return (
     <ThemeProvider theme={LPtheme}>

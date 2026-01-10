@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
@@ -50,7 +52,7 @@ export default function Features() {
   return (
     <Container id="features" sx={{ py: { xs: 8, sm: 16 } }}>
       <Grid container spacing={6}>
-        <Grid item xs={12} md={6}>
+        <Grid size={{xs: 12, md: 6}}>
           <div>
             <Typography component="h2" variant="h4" color="text.primary">
               Servicii
@@ -63,7 +65,7 @@ export default function Features() {
               Descoperă expertiza noastră în proiectarea PCB-urilor, de la realizarea conexiunilor electronice și designul eficient al layout-ului, până la prototipare și testare riguroasă, pentru a aduce la viață cele mai complexe idei electronice.
             </Typography>
           </div>
-          <Grid container item gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
+          <Grid gap={1} sx={{ display: { xs: 'auto', sm: 'none' } }}>
             {items.map(({ title }, index) => (
               <Chip
                 key={index}
@@ -193,12 +195,7 @@ export default function Features() {
             ))}
           </Stack>
         </Grid>
-        <Grid
-          item
-          xs={12}
-          md={6}
-          sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}
-        >
+        <Grid size={{xs: 12, md: 6}} sx={{ display: { xs: 'none', sm: 'flex' }, width: '100%' }}>
           <Card
             variant="outlined"
             sx={{

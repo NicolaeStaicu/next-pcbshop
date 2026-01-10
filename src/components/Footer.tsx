@@ -1,3 +1,5 @@
+'use client'
+
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
@@ -13,9 +15,8 @@ import HomeIcon from '@mui/icons-material/Home';
 import PersonIcon from '@mui/icons-material/Person2Outlined';
 import MessageIcon from '@mui/icons-material/Message';
 import SendIcon from '@mui/icons-material/Send';
-import LoadingButton from '@mui/lab/LoadingButton';
 import { brand } from '@/theme';
-import { Alert, AlertColor, Card, CardActions, CardContent, CardHeader, Slide, SlideProps, Snackbar, SnackbarOrigin, TextField } from '@mui/material';
+import { Alert, AlertColor, Button, Card, CardActions, CardContent, CardHeader, Slide, SlideProps, Snackbar, SnackbarOrigin, TextField } from '@mui/material';
 import emailjs from '@emailjs/browser';
 
 function Copyright() {
@@ -49,7 +50,7 @@ export default function Footer() {
   const [showSnackBar, setShowSnackBar] = React.useState<boolean>(false);
   const [loading, setLoading] = React.useState(false);
   const { vertical, horizontal, open, severity, message } = state;
-  const form = React.useRef();
+  const form = React.useRef<HTMLFormElement | null>(null);
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
@@ -211,9 +212,9 @@ export default function Footer() {
                   <TextField type='text' name='message' required hiddenLabel multiline fullWidth id="input-message" label="Mesaj" variant="outlined" rows={6} />
                 </Box>
                 <CardActions sx={{ padding: 0, paddingTop: '8px' }} className='justify-end'>
-                  <LoadingButton type='submit' loading={loading} variant='outlined' startIcon={<SendIcon />}>
+                  <Button type='submit' loading={loading} variant='outlined' startIcon={<SendIcon />}>
                     Trimite
-                  </LoadingButton>
+                  </Button>
                 </CardActions>
               </Box>
               {showSnackBar ?

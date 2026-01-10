@@ -1,4 +1,5 @@
-import * as React from 'react';
+'use client'
+
 import { alpha } from '@mui/material';
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
